@@ -9,7 +9,7 @@ namespace CycleProvider.Library.Tests
         [TestMethod]
         public void Next_LastElement_ReturnsFerstElement()
         {
-            var cycleProvider = new CycleProvider();
+            var cycleProvider = new CycleProvider<string>();
             cycleProvider.Add("First Item");
             cycleProvider.Add("Second Item");
             cycleProvider.Add("Third Item");
@@ -24,7 +24,7 @@ namespace CycleProvider.Library.Tests
         [TestMethod]
         public void Next_FirstUse_ReturnsFerstElement()
         {
-            var cycleProvider = new CycleProvider();
+            var cycleProvider = new CycleProvider<string>();
             cycleProvider.Add("First Item");
 
             object actual = cycleProvider.Next();
@@ -34,7 +34,7 @@ namespace CycleProvider.Library.Tests
         [TestMethod]
         public void Next_ThreeUse_ReturnsFerstElement()
         {
-            var cycleProvider = new CycleProvider();
+            var cycleProvider = new CycleProvider<string>();
             cycleProvider.Add("First Item");
             cycleProvider.Add("Second Item");
             cycleProvider.Add("Third Item");
@@ -48,7 +48,7 @@ namespace CycleProvider.Library.Tests
         [TestMethod]
         public void Next_NoItems_ThrowException()
         {
-            var cycleProvider = new CycleProvider();
+            var cycleProvider = new CycleProvider<int>();
             var actual = Assert.ThrowsException<InvalidOperationException>(() => cycleProvider.Next());
             Assert.AreEqual("Cycle provider has no item", actual.Message);
         }
@@ -57,7 +57,7 @@ namespace CycleProvider.Library.Tests
         {
             const string lastItem = "Last Item";
             var wasInvoke = false;
-            var cycleProvider = new CycleProvider();
+            var cycleProvider = new CycleProvider<string>();
             cycleProvider.Add("First Item");
             cycleProvider.Add(lastItem);
             cycleProvider.OnLastItem += (s, a) =>

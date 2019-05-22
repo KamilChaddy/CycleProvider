@@ -8,33 +8,35 @@ namespace CycleProvider.Library.Tests
     public class ICycleProviderTests
     {
 
-        private class FakeCycyleProvider : ICycleProvider
+        private class FakeCycyleProvider<T> : ICycleProvider<T>
         {
+            private T _item;
+
+#pragma warning disable CS0067
             public event Action<object, CycleProviderEventArgs> OnLastItem;
-            public void Add(object item)
+#pragma warning restore CS0067
+
+            public void Add(T item)
             {
-                throw new NotImplementedException();
+                _item = item;
             }
-            public object Next()
+            T ICycleProvider<T>.Next()
             {
-                return 10;
+                return _item;
             }
             public void AdditionalMethodOutsideOfIntefaceDefinition() { }
-        }
-
-        public ICycleProviderTests()
-        {
-           var _cycleProvider = new FakeCycyleProvider();
         }
 
         [TestMethod]
         public void TDD_PreTestPreparation_Demo()
         {
-            var outsidecycleprovider = new FakeCycyleProvider();
+            FakeCycyleProvider<int> outsidecycleprovider = new FakeCycyleProvider<int>();
             outsidecycleprovider.AdditionalMethodOutsideOfIntefaceDefinition();
-            var cycleProvider = new FakeCycyleProvider();
 
+            ICycleProvider<int> cycleProvider = new FakeCycyleProvider<int>();
+            cycleProvider.Add(10);
             var actual = cycleProvider.Next();
+
             Assert.AreEqual(10, actual);
         }
     }
