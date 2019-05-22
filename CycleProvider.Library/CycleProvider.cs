@@ -1,17 +1,21 @@
 ﻿using CycleProvider.Contracts;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.ComponentModel;
 
 namespace CycleProvider.Library
 {
-    public class CycleProvider<T> : ICycleProvider<T>
+    public class CycleProvider<T> : ICycleProvider<T>, INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
         public event Action<object, CycleProviderEventArgs> OnLastItem;
         private List<T> _items = new List<T>();
         private int _currentItem = -1;
+
+        public T CurrentItem => _currentItem == -1
+            ? throw new InvalidOperationException(InvalidOperationExceptionMessages.EmptyCycleProviderList)
+            : _items[_currentItem];
+
         public void Add(T item)
         {
             _items.Add(item);
@@ -28,8 +32,12 @@ namespace CycleProvider.Library
             if (_currentItem == totalItems - 1)
                 OnLastItem?.Invoke(this, new CycleProviderEventArgs { LastItem = returnItem, TotalItems = totalItems });
 
+            PropertyChanged?.Invoke(this, _currenntItemArgs);
+
             return returnItem;
 
         }
+
+        private static readonly PropertyChangedEventArgs _currenntItemArgs = new PropertyChangedEventArgs(nameof(CurrentItem));
     }
 }

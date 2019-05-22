@@ -7,5 +7,7 @@ namespace CycleProvider.Contracts
         event Action<object, CycleProviderEventArgs> OnLastItem;
         void Add(T item);
         T Next();
+
+        T CurrentItem { get; }
     }
 }
