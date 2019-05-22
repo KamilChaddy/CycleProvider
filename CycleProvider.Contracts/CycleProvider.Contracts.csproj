@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2FD4B666-14C1-4FAB-81A9-F18335BECCFA}</ProjectGuid>
+    <ProjectGuid>{666280D5-2F68-46BA-A6D9-C2FE38B6BDD2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CycleProvider.Library</RootNamespace>
-    <AssemblyName>CycleProvider.Library</AssemblyName>
+    <RootNamespace>CycleProvider.Contracts</RootNamespace>
+    <AssemblyName>CycleProvider.Contracts</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,14 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CycleProvider.cs" />
+    <Compile Include="CycleProviderEventArgs.cs" />
+    <Compile Include="ICycleProvider.cs" />
+    <Compile Include="InvalidOperationExceptionMessages.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CycleProvider.Contracts\CycleProvider.Contracts.csproj">
-      <Project>{666280d5-2f68-46ba-a6d9-c2fe38b6bdd2}</Project>
-      <Name>CycleProvider.Contracts</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
