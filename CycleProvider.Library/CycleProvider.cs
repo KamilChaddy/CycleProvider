@@ -21,7 +21,7 @@ namespace CycleProvider.Library
             _items.Add(item);
         }
         
-        public T Next()
+        public virtual T Next()
         {
             int totalItems = _items.Count;
 
