@@ -41,8 +41,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CycleProviderEventArgs.cs" />
+    <Compile Include="HRException.cs" />
     <Compile Include="ICycleProvider.cs" />
     <Compile Include="InvalidOperationExceptionMessages.cs" />
+    <Compile Include="IPerson.cs" />
     <Compile Include="OneItemBagException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
