@@ -6,7 +6,6 @@ namespace CycleProvider.Library
     public abstract class PersonBase : IPerson // gdy jest abstract to nie da sie zrobić new ale można dziedziczyć, jezeli jest seald to jest opieczętowana i nie da się dziedziczyć
     {
         public static int Counter { get; private set; } = 0; //dla składowych statycznech tworzony jest dodatkowy obiekt
-
         public int Id { get; }
         public abstract string FirstName { get; set; }
         public abstract string LastName { get; set; }

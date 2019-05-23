@@ -52,7 +52,9 @@
     <Compile Include="ICycleProviderTests.cs" />
     <Compile Include="OneItemBagTest.cs" />
     <Compile Include="PersonBaseTests.cs" />
+    <Compile Include="PersonBuilderTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThreadExtensionTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
