@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CycleProvider.Library.Tests
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CycleProvider.WpfApp", "..\CycleProvider.WpfApp\CycleProvider.WpfApp.csproj", "{69FEF44F-DF4C-4720-9373-66A60F2CA68E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CycleProvider.ConsoleApp", "..\..\CycleProvider.ConsoleApp\CycleProvider.ConsoleApp\CycleProvider.ConsoleApp.csproj", "{BF14D556-938B-421B-B26B-4B84D713B7E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CycleProvider.ConsolParallel", "CycleProvider.ConsolParallel\CycleProvider.ConsolParallel.csproj", "{F9992334-6FBD-4328-AAC2-89F101F6E106}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{69FEF44F-DF4C-4720-9373-66A60F2CA68E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69FEF44F-DF4C-4720-9373-66A60F2CA68E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69FEF44F-DF4C-4720-9373-66A60F2CA68E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF14D556-938B-421B-B26B-4B84D713B7E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF14D556-938B-421B-B26B-4B84D713B7E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF14D556-938B-421B-B26B-4B84D713B7E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF14D556-938B-421B-B26B-4B84D713B7E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9992334-6FBD-4328-AAC2-89F101F6E106}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9992334-6FBD-4328-AAC2-89F101F6E106}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9992334-6FBD-4328-AAC2-89F101F6E106}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9992334-6FBD-4328-AAC2-89F101F6E106}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

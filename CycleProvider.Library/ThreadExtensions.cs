@@ -9,7 +9,7 @@ namespace CycleProvider.Library
 {
     public static class ThreadExtensions
     {
-        public static string Sleep(this int milliseconds, bool withLog = false)
+        private static string Sleep(this int milliseconds, bool withLog = false)
         {
             string returnValue;
             var start = DateTime.Now;
