@@ -41,5 +41,6 @@
         <TextBox Name="TxtColor1" Height="20" Width="100"></TextBox>
         <TextBox Name="TxtColor2" Height="20" Width="100" Grid.Column="1" Grid.Row="1" 
                  Background="{Binding Text, ElementName=TxtColor1}"></TextBox>
+        <Button Name ="BtnStart" Content="Button" HorizontalAlignment="Left" Margin="136,78,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75"/>
     </Grid>
 </Window>

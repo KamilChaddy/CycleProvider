@@ -1,6 +1,7 @@
 ﻿using CycleProvider.Library;
 using System.Windows;
 using sp = System.Windows.Shapes;
+using CycleProvider.CalculatorService;
 
 namespace CycleProvider.WpfApp
 {
@@ -23,6 +24,13 @@ namespace CycleProvider.WpfApp
 
             ElpFloat.DataContext = _provider;
             ElpFloat.MouseEnter += (s, a) => { _provider.Next(); Title = _provider.CurrentItem.ToString(); };
+
+            BtnStart.Click += (s, a) =>
+            {
+                var calc = new ServiceReference1.CalculatorServiceClient();
+                var add = calc.Add(12, 500);
+                Title = $"Run :) {add.LeftOperand} + {add.RightOperand} = {add.Result}";
+            };
         }
         private struct Point
         {
