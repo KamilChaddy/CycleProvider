@@ -15,7 +15,6 @@ namespace CycleProvider.Library.Tests
 
             LogFromDynamic(new { FirstName = "Person ", LastName = new {AnyPropety = "dsadsdasda", OtherProperty = "dsadasdasd", } });
         }
-
         private static void LogFromDynamic(dynamic fullName)
         {
             Console.WriteLine($"FN: {fullName.FirstName}, LN: {fullName.LastName}");
