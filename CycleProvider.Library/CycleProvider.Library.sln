@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CycleProvider.ConsolParalle
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CycleProvider.CalculatorService", "CycleProvider.CalculatorService\CycleProvider.CalculatorService.csproj", "{83ED8877-B1EE-431B-9681-21BBF584EC30}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CycleProvider.MVC", "CycleProvider.MVC\CycleProvider.MVC.csproj", "{9A0ADBD4-EEA2-4468-AE72-5B90F4746F87}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{83ED8877-B1EE-431B-9681-21BBF584EC30}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83ED8877-B1EE-431B-9681-21BBF584EC30}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83ED8877-B1EE-431B-9681-21BBF584EC30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A0ADBD4-EEA2-4468-AE72-5B90F4746F87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A0ADBD4-EEA2-4468-AE72-5B90F4746F87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A0ADBD4-EEA2-4468-AE72-5B90F4746F87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A0ADBD4-EEA2-4468-AE72-5B90F4746F87}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
